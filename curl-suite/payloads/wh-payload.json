@@ -1,0 +1,13 @@
+{
+  "name": "Mercado de Xalapa",
+  "code": "XAL-MF",
+  "location": {
+    "streetname": "Rio Vinazco",
+    "postalCode": "91069",
+    "suburb": "Cuauhtemoc",
+    "city": "Xalapa",
+    "state": "VER",
+    "latitude": 19.522458,
+    "longitude": -96.905241
+  }
+}

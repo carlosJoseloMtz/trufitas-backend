@@ -1,0 +1,5 @@
+{
+  "secret": "tienemuchasalnomegusta",
+  "ttl": "48h",
+  "salt": 10
+}
