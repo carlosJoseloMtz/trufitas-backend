@@ -19,7 +19,7 @@ const router = new Router()
 const adminOnly = allowGroups('admin')
 
 router.post('/users/login', loginAdmin)
-router.post('/users', adminOnly,registerAdmin)
+router.post('/users', registerAdmin)
 router.get('/users', adminOnly, showAllUsers)
 
 router.post('/warehouses', adminOnly, newWarehouse)

@@ -5,6 +5,8 @@ const loginAdmin = (req, res) => {
 
   login({ username, password })
     .then(loginRes => {
+      res.cookie('token', `Bearer ${loginRes.token}`, { httpOnly: true })
+      loginRes.token = 'fake'
       res.json(loginRes)
     })
     .catch(err => {

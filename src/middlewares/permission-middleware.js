@@ -5,7 +5,7 @@ const securityConfig = require('../config/token-config.json')
 const allowGroups = (...groups) => {
 
   return (req, res, next) => {
-    const token = req.headers['authorization']
+    const token = (req.cookies.token || '').replace('Bearer ', '')
 
     let decoded = null
     try {

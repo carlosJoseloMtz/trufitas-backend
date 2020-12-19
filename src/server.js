@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const cors =  require('cors')
+const cors = require('cors')
+const cookieParser = require('cookie-parser')
 
 // config
 const { connectToDB } = require('./config/db')
@@ -16,7 +17,9 @@ const adminv1 = require('./routes/admin-v1')
 
 const app = express()
 
+// TODO: we should probably remove CORS for prod since it's hosted under the same domain
 app.use(cors())
+app.use(cookieParser())
 
 const appPort = process.env.PORT || 3030
 
